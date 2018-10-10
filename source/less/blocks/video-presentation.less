@@ -1,6 +1,8 @@
 .video-presentation__title,
 .video-presentation__proposal {
-  margin: 0;
+  margin: 0 auto;
+  width: 260px;
+  text-align: center;
 }
 
 .video-presentation__title {
@@ -15,6 +17,18 @@
 }
 
 .video-presentation__media {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  height: 201px;
   background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: @tablet-width) {
+  .video-presentation__media {
+    height: 500px;
+  }
 }
