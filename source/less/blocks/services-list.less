@@ -1,9 +1,18 @@
 .services-list {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
   list-style: none;
   color: #333333;
   background-color: #ffffff;
+}
+
+.services-list__item {
+  position: relative;
+  margin-left: 50px;
+  margin-top: 30px;
 }
 
 .services-list__title {
@@ -14,4 +23,29 @@
 
 .services-list__description {
   margin: 0;
+}
+
+.services-list__icon {
+  position: absolute;
+  top: -10px;
+  left: -50px;
+}
+
+@media (min-width: @tablet-width) {
+  .services-list {
+    width: auto;
+    flex-direction: row;
+  }
+
+  .services-list__item {
+    margin: 0;
+    width: 33.333%;
+    text-align: center;
+  }
+
+  .services-list__icon {
+    position: static;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
 }
