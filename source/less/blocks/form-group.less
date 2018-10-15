@@ -1,10 +1,25 @@
 .form-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
   padding: 0;
+  padding-bottom: 28px;
+  margin-top: 24px;
   border: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .form-group::after {
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
 }
 
 .form-group__block {
@@ -16,6 +31,8 @@
 .form-group__item {
   display: flex;
   align-items: baseline;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .form-group__item--info {
@@ -25,6 +42,7 @@
 .form-group__title {
   width: 275px;
   margin: 0;
+  margin-bottom: 17px;
   padding: 0;
   font-size: 18px;
   line-height: (26/18);
@@ -42,6 +60,27 @@
   line-height: (26/18);
   font-weight: 700;
   width: 100%;
+}
+
+.form-group__input--text:hover {
+  background-color: #e5e5e5;
+}
+
+.form-group__input--text:focus {
+  background-color: #ffffff;
+  outline: 4px solid #e5e5e5;
+}
+
+.form-group__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
 }
 
 .form-group__label {
@@ -72,19 +111,79 @@
   text-transform: none;
 }
 
-.form-group__label--radio {
+.form-group__button {
+  display: flex;
+  align-items: center;
+  position: relative;
   height: 56px;
+  padding-left: 75px;
+  margin-bottom: 24px;
+  cursor: pointer;
 }
 
-.form-group__label--checkbox {
+.form-group__button::before {
+  position: absolute;
+  left: 0;
+  display: block;
+  content: "";
+  width: 56px;
   height: 56px;
-  width: 210px;
+  background-color: #f2f2f2;
+}
+
+.form-group__button--radio::before {
+  border-radius: 50%;
+}
+
+.form-group__button:hover::before {
+  background-color: #e5e5e5;
+}
+
+.form-group__button:active::before {
+  background-color: #d5d5d5;
+}
+
+input[type="radio"]:checked + .form-group__label--radio::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  width: 22px;
+  height: 22px;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + .form-group__label--radio:active::before {
+  opacity: 0.3;
+}
+
+.form-group__button--checkbox::before {
+  border-radius: 5px;
+}
+
+input[type="checkbox"]:checked + .form-group__label--checkbox::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 24px;
+  height: 16px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:checked + .form-group__label--checkbox:active::before {
+  opacity: 0.3;
 }
 
 .form-group__comment-text {
   resize: none;
   width: 280px;
   min-height: 160px;
+  font-family: "PT Sans", "Arial", sans-serif;
   background-color: #f2f2f2;
   border: none;
   padding-left: 20px;
@@ -123,9 +222,62 @@
     text-align: left;
   }
 
+  .form-group--name,
+  .form-group--order-1 {
+    width: 45%;
+  }
+
+  .form-group--name {
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: -42px;
+      width: 1px;
+      height: 263px;
+      background-color: #dbdbdb;
+    }
+  }
+
   .form-group--order-1 {
     order: -1;
     justify-content: space-between;
+  }
+
+  .form-group__title {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    &--info::before,
+    &--showplace::before,
+    &--comment::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    &--info::after,
+    &--showplace::after,
+    &--comment::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
   }
 
   .form-group--info {
@@ -142,6 +294,10 @@
 
   .form-group__comment-text {
     width: 100%;
+  }
+
+  .form-group__button--checkbox {
+    width: 42%;
   }
 
   .form-group__container-showplace {
@@ -167,13 +323,38 @@
     width: 100%;
   }
 
+  .form-group__button--checkbox {
+    width: auto;
+  }
+
   .form-group__container-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
+  .form-group__title {
+    position: relative;
+
+    &--info::before,
+    &--showplace::before,
+    &--comment::before,
+    &--info::after,
+    &--showplace::after,
+    &--comment::after {
+      width: 280px;
+    }
+  }
+
+  .form-group__title--info {
+    margin-bottom: 75px;
+  }
+
   .form-group__disable {
     display: none;
+  }
+
+  .form-group__icon {
+    top: 0;
   }
 }

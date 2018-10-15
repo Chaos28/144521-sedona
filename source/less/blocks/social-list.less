@@ -5,6 +5,35 @@
   list-style: none;
 }
 
+.social-list :not(:last-child) {
+  margin-right: 6px;
+}
+
 .social-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  font-size: 0;
   text-decoration: none;
+  background-color: #81b3d2;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.social-list__item:hover {
+  background-color: #669ec0;
+}
+
+.social-list__item:active {
+  background-color: #5496bd;
+}
+
+.social-list__item:active .social-list__icon {
+  opacity: 0.3;
+}
+
+.social-list__icon {
+  fill: rgba(255, 255, 255, 1);
 }

@@ -2,6 +2,8 @@
   display: block;
   width: 260px;
   margin: 0 auto;
+  margin-top: 46px;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -15,11 +17,13 @@
   text-align: center;
 }
 
-.presentation__map {
-  display: block;
-  min-width: 320px;
-  min-height: 350px;
-  background-image: url("../img/bg-map-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+@media (min-width: @tablet-width) {
+  .presentation__title {
+    width: 455px;
+  }
+
+  .presentation__description {
+    width: 535px;
+    margin-bottom: 32px;
+  }
 }

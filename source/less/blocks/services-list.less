@@ -3,6 +3,8 @@
   flex-direction: column;
   width: 280px;
   margin: 0 auto;
+  margin-top: 26px;
+  margin-bottom: 30px;
   padding: 0;
   list-style: none;
   color: #333333;
@@ -12,7 +14,6 @@
 .services-list__item {
   position: relative;
   margin-left: 50px;
-  margin-top: 30px;
 }
 
 .services-list__title {
@@ -26,9 +27,19 @@
 }
 
 .services-list__icon {
+  display: block;
   position: absolute;
   top: -10px;
   left: -50px;
+  width: 40px;
+  height: 38px;
+  fill: #81b3d2;
+}
+
+@media (max-width: @mobile-width-only) {
+  .services-list__item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -43,9 +54,25 @@
     text-align: center;
   }
 
+  .services-list__item--reverse {
+    order: 1;
+  }
+
+  .services-list__title {
+    font-size: 21px;
+  }
+
+  .services-list__description {
+    margin: 0 auto;
+    width: 180px;
+  }
+
   .services-list__icon {
     position: static;
     margin: 0 auto;
     margin-top: 60px;
+    margin-bottom: 10px;
+    width: 75px;
+    height: 72px;
   }
 }

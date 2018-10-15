@@ -4,10 +4,15 @@
   margin: 0 auto;
 }
 
-.main-nav__toggle {
+.main-nav__toggle-close {
   position: absolute;
-  top: 20px;
+  top: 17px;
   right: 20px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  fill: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
@@ -16,13 +21,13 @@
     margin: 0 auto;
   }
 
-  .main-nav__toggle {
+  .main-nav__toggle-close {
     display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: 960px;
+    width: 100%;
   }
 }
