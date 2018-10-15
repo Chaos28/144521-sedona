@@ -5,11 +5,25 @@
   font-weight: 700;
   color: #000000;
   text-align: center;
+  margin-top: 44px;
+  margin-bottom: 40px;
 }
 
 .gallery__description {
+  display: block;
   width: 280px;
   margin: 0 auto;
   line-height: 24px;
   text-align: center;
+  margin-bottom: 34px;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__title {
+    font-size: 30px;
+  }
+
+  .gallery__description {
+    width: 470px;
+  }
 }

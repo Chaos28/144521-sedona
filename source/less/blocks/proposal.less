@@ -23,6 +23,7 @@
 .proposal__search {
   display: block;
   padding-top: 17px;
+  margin-bottom: 49px;
   width: 280px;
   height: 58px;
   background-color: #81b3d2;
@@ -34,6 +35,38 @@
   color: #ffffff;
 }
 
+.proposal__search:hover {
+  background-color: #669ec0;
+}
+
+.proposal__search:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.proposal__search[disabled] {
+  background-color: #e5e5e5;
+}
+
+.proposal__map {
+  position: relative;
+  display: block;
+  min-width: 320px;
+  min-height: 350px;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.proposal__mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 @media (min-width: @tablet-width) {
   .proposal {
     width: 458px;
@@ -41,5 +74,12 @@
 
   .proposal__search {
     width: 458px;
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .proposal__search {
+    margin-bottom: 66px;
   }
 }
