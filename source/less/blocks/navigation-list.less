@@ -73,6 +73,11 @@
     width: 100%;
   }
 
+  .navigation-list__item--logo img {
+    width: auto;
+    position: absolute;
+  }
+
   .navigation-list__url {
     color: #000000;
   }
@@ -107,11 +112,13 @@
     width: 102px;
   }
 
-  .navigation-list__item--logo img {
-    position: absolute;
-  }
-
   .navigation-list__item--button {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .navigation-list__item--logo {
+    width: 188px;
   }
 }

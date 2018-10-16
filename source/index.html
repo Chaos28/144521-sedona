@@ -13,7 +13,13 @@
           <ul class="navigation-list">
             <li class="navigation-list__item"><a class="navigation-list__url navigation-list__url--active" href="index.html">Главная</a></li>
             <li class="navigation-list__item"><a class="navigation-list__url" href="photo.html">Фото и видео</a></li>
-            <li class="navigation-list__item navigation-list__item--logo"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Лого Седона"></li>
+            <li class="navigation-list__item navigation-list__item--logo">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" alt="Лого Седона">
+              </picture>
+            </li>
             <li class="navigation-list__item"><a class="navigation-list__url" href="form.html">Форма отзыва</a></li>
             <li class="navigation-list__item"><a class="navigation-list__url" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a></li>
             <li class="navigation-list__item navigation-list__item--button">
@@ -53,10 +59,15 @@
                 <span class="features__order-number">&mdash; №1 &mdash;</span>
                 <p class="features__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
-              <div class="features__img"><img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Город Седона">
+              <div class="features__img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg 2x">
+                  <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Город Седона">
+                </picture>
               </div>
             </div>
-            <div class="features__item">
+            <div class="features__item features__item--services-list">
               <ul class="services-list wrapper">
                   <li class="services-list__item">
                     <svg class="services-list__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.695px" height="72.346px" viewBox="0 0 74.695 72.346" enable-background="new 0 0 74.695 72.346" xml:space="preserve">
@@ -106,7 +117,13 @@
                 <span class="features__order-number">&mdash; №2 &mdash;</span>
                 <p class="features__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <div class="features__img"><img src="img/main-bridge-mobile@1x.jpg" width="320" height="280" alt="Мост Дьявола"></div>
+              <div class="features__img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/main-bridge-desktop@1x.jpg, img/main-bridge-desktop@1x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg, img/main-bridge-tablet@2x.jpg 2x">
+                  <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
+                </picture>
+              </div>
             </div>
             <div class="features__item features__item--three-blocks wrapper">
               <h3 class="features__title">Небольшая площадь</h3>
@@ -125,11 +142,18 @@
             </div>
           </section>
           <section class="proposal">
-            <h2 class="proposal__title">Заинтересовались?</h2>
-            <p class="proposal__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="proposal__search" href="#">Найти гостиницу</a>
+            <div class="proposal__text">
+              <h2 class="proposal__title">Заинтересовались?</h2>
+              <p class="proposal__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+              <a class="proposal__search" href="#">Найти гостиницу</a>
+            </div>
             <div class="proposal__map">
-              <img class="proposal__mark" src="img/icon-map-marker.svg" width="27" height="27">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/bg-map-desktop@1x.jpg, img/bg-map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg, img/bg-map-tablet@2x.jpg 2x">
+              <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта Седоны">
+              </picture>
+              <img class="proposal__mark" src="img/icon-map-marker.svg" width="27" height="27" alt="Маркер на карте">
             </div>
           </section>
       </article>

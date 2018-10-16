@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 280px;
+
   margin: 0 auto;
   text-align: center;
+}
+
+.proposal__text {
+  width: 280px;
 }
 
 .proposal__title {
@@ -18,6 +22,10 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+}
+
+.proposal__description br {
+  display: none;
 }
 
 .proposal__search {
@@ -51,11 +59,6 @@
 .proposal__map {
   position: relative;
   display: block;
-  min-width: 320px;
-  min-height: 350px;
-  background-image: url("../img/bg-map-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .proposal__mark {
@@ -68,13 +71,17 @@
 }
 
 @media (min-width: @tablet-width) {
-  .proposal {
+  .proposal__text {
     width: 458px;
   }
 
   .proposal__search {
     width: 458px;
     margin-bottom: 58px;
+  }
+
+  .proposal__description br {
+    display: inline;
   }
 }
 
