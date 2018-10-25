@@ -1,20 +1,21 @@
 .video-presentation__title {
   display: block;
   margin: 0 auto;
+  margin-top: 34px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
   color: #000000;
-  margin-bottom: 38px;
+  margin-bottom: 28px;
 }
 
 .video-presentation__proposal {
   display: block;
   margin: 0 auto;
   line-height: 24px;
-  margin-bottom: 40px;
-  width: 280px;
+  margin-bottom: 35px;
+  width: 275px;
   text-align: center;
 }
 
@@ -114,7 +115,7 @@
 }
 
 .video-navigation__subtitles {
-  margin-right: 31px;
+  margin-right: 26px;
 }
 
 .video-navigation__replay {
@@ -127,6 +128,12 @@
   margin-right: 23px;
 }
 
+.video-navigation__scroll-bar,
+.video-navigation__replay,
+.video-navigation__buttons {
+  margin-top: 5px;
+}
+
 
 @media (min-width: @tablet-width) {
   .video-presentation__title {
@@ -134,7 +141,8 @@
   }
 
   .video-presentation__proposal {
-    width: 460px;
+    width: 440px;
+    margin-bottom: 70px;
   }
 
   .video-presentation__media {
@@ -178,6 +186,14 @@
     }
   }
 
+  .video-navigation__buttons {
+    margin-right: 39px;
+  }
+
+  .video-navigation__replay {
+    margin-left: 35px;
+  }
+
   .video-navigation__scroll-bar {
     order: 0;
     width: 389px;
@@ -189,6 +205,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .video-presentation__title {
+    margin-bottom: 30px;
+  }
+
+  .video-presentation__proposal {
+    margin-bottom: 72px;
+  }
+
   .video-presentation__media {
     background-image: url("../img/video-desktop@1x.jpg");
   }

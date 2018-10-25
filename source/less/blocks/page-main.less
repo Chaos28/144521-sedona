@@ -9,7 +9,7 @@
     no-repeat,
     no-repeat;
   background-position:
-    center,
+    center calc(50% + 2px),
     bottom,
     center;
   background-size:
@@ -25,9 +25,13 @@
     url("../img/bg-intro-triangle-desktop.svg"),
     url("../img/bg-back-mobile@1x.jpg");
   background-position:
-    center,
+    center calc(50% - 7px),
     bottom,
     center -230px;
+  background-size:
+    229px 39px,
+    auto,
+    auto;
 }
 
 @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -58,11 +62,11 @@
       url("../img/bg-intro-triangle-desktop.svg"),
       url("../img/bg-back-mobile@2x.jpg");
     background-position:
-      center,
+      center calc(50% - 7px),
       bottom,
       center -230px;
     background-size:
-      282px 214px,
+      229px 39px,
       auto,
       768px auto;
   }
@@ -80,7 +84,7 @@
       no-repeat,
       no-repeat;
     background-position:
-      center,
+      center calc(50% - 8px),
       bottom,
       center;
     background-size:
@@ -117,7 +121,7 @@
         no-repeat,
         no-repeat;
       background-position:
-        center,
+        auto,
         bottom,
         center;
       background-size:
@@ -147,6 +151,7 @@
 @media (min-width: @desktop-width) {
   .page-main__bg {
     min-height: 518px;
+    background-color: #84b5d3;
     background-image:
       url("../img/text-sedona-index.svg"),
       url("../img/bg-intro-triangle-desktop.svg"),
@@ -156,7 +161,7 @@
       no-repeat,
       no-repeat;
     background-position:
-      center,
+      auto,
       bottom,
       center;
     background-size:
@@ -166,7 +171,8 @@
   }
 
   .page-main__bg--another-page {
-    min-height: 288px;
+    min-height: 301px;
+    background-color: #6c686c;
     background-image:
       url("../img/text-sedona.svg"),
       url("../img/bg-intro-triangle-desktop.svg"),
@@ -174,7 +180,7 @@
     background-position:
       center 101px,
       bottom,
-      center -230px;
+      center -217px;
     background-size:
       461px 80px,
       auto,
@@ -203,7 +209,7 @@
     }
 
     .page-main__bg--another-page {
-      min-height: 288px;
+      min-height: 301px;
       background-image:
         url("../img/text-sedona.svg"),
         url("../img/bg-intro-triangle-desktop.svg"),

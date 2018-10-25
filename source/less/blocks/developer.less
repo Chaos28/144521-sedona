@@ -1,3 +1,9 @@
+@media (max-width: @mobile-width-only) {
+  .developer {
+    margin-bottom: -6px;
+  }
+}
+
 .developer__description {
   margin: 0;
   font-size: 14px;
@@ -11,8 +17,19 @@
 }
 
 .developer__logo {
+  position: relative;
   display: inline-block;
   fill: #000000;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .developer__logo:hover {
@@ -21,4 +38,10 @@
 
 .developer__logo:active {
   fill: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .developer__description {
+    padding-top: 8px;
+  }
 }
