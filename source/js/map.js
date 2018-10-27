@@ -24,7 +24,7 @@ ymaps.ready(function () {
 
         }, {
             iconLayout: 'default#imageWithContent',
-            iconImageHref: '../img/icon-map-marker.svg',
+            iconImageHref: 'img/icon-map-marker.svg',
             iconImageSize: [27, 27],
             iconImageOffset: [-20, 0],
             iconContentOffset: [0, 0],
