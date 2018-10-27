@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 0 auto;
+  margin-top: 27px;
   text-align: center;
 }
 
@@ -13,7 +13,6 @@
 
 .proposal__title {
   margin: 0;
-  margin-top: 22px;
   margin-bottom: 20px;
   font-size: 21px;
   line-height: 26px;
@@ -62,27 +61,16 @@
   background-color: #e5e5e5;
 }
 
-.proposal__map {
-  position: relative;
-  display: block;
-}
-
-.proposal__mark {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
 @media (min-width: @tablet-width) {
+  .proposal {
+    margin-top: 58px;
+  }
+
   .proposal__text {
     width: 458px;
   }
 
   .proposal__title {
-    margin-top: 58px;
     margin-bottom: 30px;
     font-size: 30px;
   }
@@ -103,6 +91,10 @@
 
 @media (min-width: @desktop-width) {
   .proposal__search {
-    margin-bottom: 66px;
+    margin-bottom: 68px;
+  }
+
+  .proposal__description {
+    margin-bottom: 45px;
   }
 }

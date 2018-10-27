@@ -11,7 +11,8 @@
   color: #000000;
 }
 
-.developer__description span {
+.developer__description-text {
+  display: inline-block;
   vertical-align: top;
   margin-right: 12px;
 }
@@ -43,5 +44,10 @@
 @media (min-width: @tablet-width) {
   .developer__description {
     padding-top: 8px;
+  }
+
+  .developer__description-text {
+    margin-right: 9px;
+    margin-top: 2px;
   }
 }

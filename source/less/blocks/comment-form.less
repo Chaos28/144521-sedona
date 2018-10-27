@@ -45,6 +45,17 @@
     align-items: stretch;
     width: 648px;
     margin-top: 72px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 292px;
+      background-color: #dbdbdb;
+    }
   }
 
   .comment-form__button {

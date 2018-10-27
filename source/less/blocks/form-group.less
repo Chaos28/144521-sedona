@@ -100,6 +100,7 @@
 }
 
 .form-group__input--text {
+  padding-top: 10px;
   padding-left: 20px;
   height: 58px;
   background-color: #f2f2f2;
@@ -293,17 +294,6 @@ input[type="checkbox"]:checked + .form-group__label--checkbox:active::before {
   .form-group--name {
     position: relative;
     padding-left: 58px;
-
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 7px;
-      left: 0;
-      width: 1px;
-      height: 292px;
-      background-color: #dbdbdb;
-    }
   }
 
   .form-group--order-1 {
@@ -408,6 +398,10 @@ input[type="checkbox"]:checked + .form-group__label--checkbox:active::before {
     flex-wrap: wrap;
     flex-direction: row;
   }
+
+  .form-group__input--text {
+    padding-top: 10px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -433,16 +427,35 @@ input[type="checkbox"]:checked + .form-group__label--checkbox:active::before {
 
   .form-group__label.form-group__label--info {
     margin-left: 0;
+    margin-right: 17px;
   }
 
   .form-group__title--feeling {
     margin-left: 80px;
   }
 
+  .form-group__block {
+    margin-top: 5px;
+  }
+
   .form-group__container-showplace {
     width: 100%;
     justify-content: space-between;
     padding-left: 0;
+  }
+
+  .form-group__button--radio {
+    padding-left: 79px;
+
+    &::before {
+      left: 5px;
+      top: -3px;
+    }
+  }
+
+  input[type="radio"]:checked + .form-group__label--radio::before {
+    left: 22px;
+    top: 13px;
   }
 
   .form-group__button.form-group__button--checkbox {
@@ -467,6 +480,7 @@ input[type="checkbox"]:checked + .form-group__label--checkbox:active::before {
   }
 
   .form-group__title {
+    margin-bottom: 56px;
     position: relative;
 
     &--info::before,
@@ -482,6 +496,16 @@ input[type="checkbox"]:checked + .form-group__label--checkbox:active::before {
   .form-group__title--info {
     margin-bottom: 70px;
   }
+
+  .form-group__title--showplace {
+    margin-bottom: 38px;
+  }
+
+  .form-group__comment-text {
+    padding-top: 14px;
+    padding-left: 22px;
+  }
+
 
   .form-group__disable {
     display: none;
