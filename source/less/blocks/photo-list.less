@@ -9,8 +9,7 @@
 }
 
 .photo-list__block {
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 15px;
 }
 
 .photo-list__name {
@@ -23,7 +22,7 @@
 }
 
 .photo-list__like {
-  display: block;
+  display: flex;
   border: none;
   padding: 0;
   background-color: transparent;
@@ -32,11 +31,11 @@
   font-weight: 700;
   color: #000000;
   cursor: pointer;
+  margin-top: 4px;
 }
 
 .photo-list__like span {
-  margin-left: 9px;
-  vertical-align: top;
+  margin-left: 13px;
 }
 
 .photo-list__icon {
@@ -49,7 +48,7 @@
   .photo-list__item {
     position: relative;
     margin-bottom: 22px;
-    padding-bottom: 24px;
+    padding-bottom: 16px;
 
     &::after {
       position: absolute;
@@ -62,8 +61,12 @@
     }
   }
 
+  .photo-list__item:last-of-type {
+    margin-bottom: 0;
+  }
+
   .photo-list__item--first {
-    padding-top: 24px;
+    padding-top: 22px;
 
     &::before {
       position: absolute;
@@ -83,7 +86,7 @@
     flex-wrap: wrap;
     width: 648px;
     margin: 0 auto;
-    margin-bottom: 69px;
+    margin-bottom: 67px;
   }
 
   .photo-list__item {
@@ -99,16 +102,33 @@
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 14px;
   }
 
   .photo-list__like {
-    margin-right: 37px;
+    margin-right: 21px;
+    margin-top: 0;
+  }
+
+  .photo-list__like--cactus,
+  .photo-list__like--bridge {
+    margin-right: 30px;
+  }
+
+  .photo-list__like--road {
+    margin-right: 36px;
+  }
+
+  .photo-list__like span {
+    margin-left: 10px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .photo-list {
     width: 1200px;
+    margin-bottom: 70px;
   }
 
   .photo-list__item {
@@ -125,7 +145,7 @@
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color: rgba(40, 40, 40, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
   }
 

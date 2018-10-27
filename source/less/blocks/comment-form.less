@@ -1,7 +1,7 @@
 .comment-form {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 280px;
   margin: 0 auto;
 }
@@ -17,6 +17,20 @@
   color: #ffffff;
   border: none;
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+.comment-form__button:hover {
+  background-color: #669ec0;
+}
+
+.comment-form__button:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.comment-form__button[disabled] {
+  background-color: #e5e5e5;
 }
 
 .comment-form__hint {
@@ -30,6 +44,18 @@
     justify-content: space-between;
     align-items: stretch;
     width: 648px;
+    margin-top: 72px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 292px;
+      background-color: #dbdbdb;
+    }
   }
 
   .comment-form__button {
@@ -38,11 +64,21 @@
 
   .comment-form__hint {
     display: block;
+    padding-top: 22px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .comment-form {
     width: 960px;
+    margin-top: 55px;
+  }
+
+  .comment-form__button {
+    width: 480px;
+  }
+
+  .comment-form__hint {
+    padding-top: 18px;
   }
 }
