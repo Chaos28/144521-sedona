@@ -50,6 +50,7 @@
 }
 
 .features__description {
+  width: 100%;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
@@ -84,6 +85,7 @@
 
   .features__item--three-blocks:not(:last-of-type)::after {
     position: absolute;
+    left: 20px;
     bottom: 0;
     content: "";
     width: 280px;
@@ -110,7 +112,8 @@
   }
 
   .features__item--services-list {
-    height: 330px;
+    height: auto;
+    padding-bottom: 30px;
   }
 
   .features__item--two-blocks {
@@ -182,6 +185,10 @@
     width: 150px;
   }
 
+  .features__item--services-list {
+    padding-bottom: 51px;
+  }
+
   .features__title--another-bg {
     width: 212px;
   }
@@ -195,7 +202,7 @@
   }
 
   .features__item--three-blocks .features__description {
-    width: auto;
+    width: 100%;
   }
 
   .features__item--three-blocks .features__description--road-descr {

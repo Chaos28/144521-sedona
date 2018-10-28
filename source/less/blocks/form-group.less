@@ -100,18 +100,19 @@
 }
 
 .form-group__input--text {
-  padding-top: 10px;
-  padding-left: 20px;
+  padding-top: 2px;
+  padding-left: 21px;
   height: 58px;
   background-color: #f2f2f2;
   border: none;
-
-  // для FF
-
-  font-size: 0;
   line-height: (26/18);
   font-weight: 700;
   width: 100%;
+}
+
+.form-group__input--name {
+  flex-grow: 1;
+  width: 67%;
 }
 
 .form-group__input--text:hover {
@@ -138,6 +139,7 @@
 .form-group__label {
   padding-top: 7px;
   margin-right: 15px;
+  flex-grow: 0;
 }
 
 .form-group__input::-webkit-input-placeholder {
@@ -404,10 +406,6 @@ input[type="checkbox"]:checked + .form-group__label--checkbox:active::before {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-  }
-
-  .form-group__item--info .form-group__input--text {
-    padding-top: 14px;
   }
 }
 
